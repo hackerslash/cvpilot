@@ -1,0 +1,6 @@
+output/
+__pycache__/
+.claude/settings.local.json
+.DS_Store
+*.pdf
+.refresh-base.lock

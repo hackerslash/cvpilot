@@ -1,0 +1,2232 @@
+{
+  "awards": [
+    {
+      "enabled": true,
+      "id": "jee-wbjee-ranks",
+      "keywords": [
+        "JEE Main",
+        "WBJEE",
+        "99.10 percentile"
+      ],
+      "priority": 85,
+      "tags": [
+        "achievement",
+        "exam"
+      ],
+      "text": "Scored 99.10 percentile (8,74,469 candidates) in JEE Main 2019; ranked 28th in the OBC category in WBJEE 2019."
+    },
+    {
+      "enabled": true,
+      "id": "national-youth-parliament",
+      "keywords": [
+        "Ministry of Parliamentary Affairs",
+        "National Youth Parliament"
+      ],
+      "priority": 70,
+      "tags": [
+        "award",
+        "leadership"
+      ],
+      "text": "Awarded by the Ministry of Parliamentary Affairs, Govt. of India for 4th place in National Youth Parliament 2016--17."
+    },
+    {
+      "enabled": true,
+      "id": "chegg-urdoer-sme",
+      "keywords": [
+        "Chegg",
+        "Urdoer",
+        "300+ CS problems",
+        "5-star ratings"
+      ],
+      "priority": 65,
+      "tags": [
+        "subject-matter-expert",
+        "computer-science"
+      ],
+      "text": "Achieved consistent 5-star ratings as Subject Matter Expert on Chegg & Urdoer across 300+ CS problems; recognised for accuracy and depth."
+    }
+  ],
+  "candidate": {
+    "email": "taylor.reed@example.com",
+    "headline": "Backend Engineer",
+    "links": [
+      {
+        "id": "github",
+        "kind": "github",
+        "label": "github/taylorreed-dev",
+        "url": "https://github.com/taylorreed-dev"
+      },
+      {
+        "id": "linkedin",
+        "kind": "linkedin",
+        "label": "linkedin/taylor-reed-dev",
+        "url": "https://www.linkedin.com/in/taylor-reed-dev/"
+      }
+    ],
+    "location": "Austin, TX",
+    "name": "TAYLOR REED",
+    "phone": "+1 555-0142"
+  },
+  "education": [
+    {
+      "bullets": [],
+      "dates": "2019 -- 2023",
+      "degree": "B.Tech, Biotechnology",
+      "enabled": true,
+      "id": "ashford-institute-btech",
+      "institution": "Ashford Institute of Technology",
+      "keywords": [
+        "Ashford Institute of Technology",
+        "B.Tech"
+      ],
+      "location": "Ashford, MA",
+      "priority": 100,
+      "tags": [
+        "education",
+        "iit"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "meridian-agentic-documentation",
+          "keywords": [
+            "clinical documentation",
+            "ASR",
+            "Pinecone",
+            "Gemini",
+            "structured clinical notes"
+          ],
+          "priority": 100,
+          "tags": [
+            "agentic-ai",
+            "rag",
+            "healthtech"
+          ],
+          "text": "Designed an agentic clinical documentation pipeline: session audio streamed to Deepgram for ASR, chunked and indexed in Pinecone via Gemini text-embedding-004; RAG over prior session history autofills case sheet parameters and generates structured clinical notes."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-worker-service",
+          "keywords": [
+            "FastAPI monolith",
+            "Redis Queue",
+            "APScheduler",
+            "pub/sub",
+            "notifications"
+          ],
+          "priority": 92,
+          "tags": [
+            "backend",
+            "architecture",
+            "async-jobs"
+          ],
+          "text": "Led extraction of the notification and worker service from the FastAPI monolith; architected 4-queue RQ system (default, messages, jobs, scheduled) with Redis health monitoring, 5-minute duplicate-task detection windows, and per-channel selective retry (FCM push, Exotel SMS, and SMTP independently tracked) \u2014 fully decoupling appointment lifecycle events and reminders from the synchronous request cycle."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-scheduling-engine",
+          "keywords": [
+            "appointment scheduling",
+            "PostgreSQL",
+            "Aurora",
+            "multi-clinic",
+            "doctor slots"
+          ],
+          "priority": 88,
+          "tags": [
+            "postgresql",
+            "healthtech",
+            "systems-design"
+          ],
+          "text": "Redesigned the appointment scheduling engine on PostgreSQL/Aurora for multi-clinic doctor-slot relationships and future date allocation, scaling the platform to providers across multiple physical locations."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-query-cache-performance",
+          "keywords": [
+            "N+1 queries",
+            "SQLAlchemy",
+            "selectinload",
+            "joinedload",
+            "Redis caching",
+            "Alembic"
+          ],
+          "priority": 96,
+          "tags": [
+            "performance",
+            "database",
+            "redis"
+          ],
+          "text": "Diagnosed and eliminated N+1 query bottlenecks via SQLAlchemy selectinload/joinedload eager-loading (10--100x speedup); added Redis caching with event-driven invalidation, Alembic migrations, and Redis health monitoring."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-aws-cost-uptime",
+          "keywords": [
+            "ECS on EC2",
+            "Auto Scaling",
+            "Aurora read replicas",
+            "AWS cost",
+            "blue-green deployments",
+            "99.9% uptime"
+          ],
+          "priority": 84,
+          "tags": [
+            "aws",
+            "devops",
+            "cost-optimization"
+          ],
+          "text": "Rightsized ECS-on-EC2 fleets (Auto Scaling, Aurora read replicas), cutting AWS spend 25% while sustaining 99.9% uptime SLA; rolled out blue-green deployments to eliminate release downtime."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-payment-integration",
+          "keywords": [
+            "Razorpay",
+            "payment gateway",
+            "webhook verification",
+            "AES-encrypted order secrets",
+            "idempotent webhooks",
+            "refund pipeline",
+            "pay-in-clinic",
+            "revenue attribution"
+          ],
+          "priority": 90,
+          "tags": [
+            "payments",
+            "backend",
+            "razorpay",
+            "webhooks"
+          ],
+          "text": "Architected end-to-end payment orchestration layer integrating Razorpay checkout and idempotent webhook verification; implemented AES-encrypted order secret management, clinic-scoped revenue attribution, and automated refund pipelines spanning appointment, assessment, membership, and pay-in-clinic payment flows."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-polyglot-persistence",
+          "keywords": [
+            "polyglot persistence",
+            "PostgreSQL",
+            "MongoDB",
+            "SQLAlchemy ORM",
+            "pymongo",
+            "Alembic migrations",
+            "multi-tenant",
+            "clinic-scoped access controls"
+          ],
+          "priority": 82,
+          "tags": [
+            "postgresql",
+            "mongodb",
+            "architecture",
+            "multi-tenant"
+          ],
+          "text": "Designed polyglot persistence layer spanning PostgreSQL (SQLAlchemy ORM, Alembic migrations) for relational clinic and appointment data and MongoDB for high-velocity clinical document writes; enforced multi-tenant isolation through clinic-scoped access controls propagated across all API and DAO layers."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-notifications-pdf",
+          "keywords": [
+            "ReportLab",
+            "PDF generation",
+            "Firebase FCM",
+            "WhatsApp AiSensy",
+            "Exotel SMS",
+            "multi-channel delivery",
+            "prescriptions",
+            "referral documents"
+          ],
+          "priority": 78,
+          "tags": [
+            "notifications",
+            "pdf",
+            "multi-channel",
+            "communications"
+          ],
+          "text": "Engineered multi-channel patient communication stack: ReportLab PDF engine for cryptographically-signed prescriptions and referral documents; Firebase FCM push, WhatsApp Business (AiSensy), Exotel SMS, and SMTP email delivery fanned out asynchronously through the RQ worker service."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-reschedule-casesheets",
+          "keywords": [
+            "reschedule orchestration",
+            "case sheet merge",
+            "session continuity",
+            "cross-clinic validations",
+            "transactional consistency"
+          ],
+          "priority": 76,
+          "tags": [
+            "backend",
+            "systems-design",
+            "healthtech",
+            "case-sheets"
+          ],
+          "text": "Revamped appointment reschedule orchestration across 10 modules (270+ LOC net addition) with cross-clinic slot validation and transactional session-continuity guarantees; rebuilt case sheet merge engine handling concurrent partial updates, prescription expiry propagation, and clinical history deduplication."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-availability-cache",
+          "keywords": [
+            "MongoDB availability cache",
+            "compound indexes",
+            "care-type filtering",
+            "Psychiatry",
+            "Therapy",
+            "Couple Family",
+            "explicit cache invalidation",
+            "slot-query latency"
+          ],
+          "priority": 74,
+          "tags": [
+            "mongodb",
+            "caching",
+            "performance",
+            "scheduling"
+          ],
+          "text": "Designed MongoDB-backed doctor availability cache with compound indexes on doctor_id, cache_updated_at, is_active, and care-type compatibility flags (Psychiatry, Therapy, Couple/Family); explicit invalidation on slot mutations drives sub-50ms slot-query response times across 200+ concurrent API endpoints."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-video-realtime",
+          "keywords": [
+            "Jitsi Meet",
+            "Zoom OAuth",
+            "VideoSDK",
+            "secure token generation",
+            "WebSocket",
+            "real-time chat",
+            "broadcast",
+            "video conferencing"
+          ],
+          "priority": 72,
+          "tags": [
+            "websocket",
+            "video",
+            "realtime",
+            "healthtech"
+          ],
+          "text": "Integrated multi-provider video conferencing stack (Jitsi Meet, Zoom OAuth, VideoSDK) with server-side secure session-token generation and clinic-scoped access control; built WebSocket-powered in-app chat with real-time broadcast supporting concurrent multi-clinic sessions."
+        },
+        {
+          "enabled": true,
+          "id": "meridian-scale-ownership",
+          "keywords": [
+            "600+ commits",
+            "94000+ LOC",
+            "200+ endpoints",
+            "35+ DAOs",
+            "25 database models",
+            "Bitbucket Pipelines",
+            "multi-environment",
+            "integration tests"
+          ],
+          "priority": 70,
+          "tags": [
+            "ownership",
+            "scale",
+            "cicd",
+            "testing"
+          ],
+          "text": "Top backend contributor across 900+ commits on a 94,000+ line Python codebase serving 200+ API endpoints, 35+ DAOs, and 25 database models; maintained multi-environment deployment pipeline via Bitbucket Pipelines with AWS SSM-based secret rotation and 25+ integration tests covering auth, payments, and scheduling flows."
+        }
+      ],
+      "dates": "Apr 2025 -- Present",
+      "enabled": true,
+      "id": "meridian-backend-developer",
+      "keywords": [
+        "FastAPI",
+        "PostgreSQL",
+        "Aurora",
+        "MongoDB",
+        "Redis",
+        "SQLAlchemy",
+        "ECS",
+        "LLM",
+        "RAG",
+        "Razorpay",
+        "Deepgram",
+        "Pinecone",
+        "Gemini",
+        "ReportLab",
+        "AiSensy",
+        "Exotel",
+        "RQ",
+        "multi-tenant"
+      ],
+      "location": "Austin, TX",
+      "organization": "Meridian Health Technologies (MeridianCare)",
+      "priority": 100,
+      "tags": [
+        "backend",
+        "healthtech",
+        "agentic-ai",
+        "aws",
+        "performance"
+      ],
+      "technologies": [
+        "FastAPI",
+        "PostgreSQL",
+        "Aurora",
+        "MongoDB",
+        "Redis",
+        "SQLAlchemy",
+        "Alembic",
+        "ECS",
+        "Deepgram",
+        "Pinecone",
+        "Gemini",
+        "Razorpay",
+        "FCM",
+        "Exotel",
+        "AiSensy",
+        "ReportLab",
+        "AWS SSM",
+        "AWS S3",
+        "RQ",
+        "Jitsi Meet",
+        "Zoom",
+        "VideoSDK",
+        "WebSocket",
+        "Bitbucket Pipelines"
+      ],
+      "title": "Backend Developer"
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "indie-full-stack-apps",
+          "keywords": [
+            "8+ production applications",
+            "React",
+            "Node.js",
+            "PostgreSQL",
+            "CI/CD"
+          ],
+          "priority": 90,
+          "tags": [
+            "full-stack",
+            "delivery",
+            "clients"
+          ],
+          "text": "Shipped 8+ production full-stack applications (React, Node.js, PostgreSQL) for SMB clients as sole engineer; owned architecture, CI/CD, and deploy lifecycle across every engagement."
+        },
+        {
+          "enabled": true,
+          "id": "scale-ai-rlhf-review",
+          "keywords": [
+            "Scale AI",
+            "Outlier",
+            "LLM-generated code",
+            "RLHF",
+            "QA rubrics",
+            "coding benchmarks"
+          ],
+          "priority": 86,
+          "tags": [
+            "llm-evaluation",
+            "rlhf",
+            "quality"
+          ],
+          "text": "Contracted with Scale AI (Outlier) reviewing 200+ LLM-generated code solutions/week across Python, TypeScript, and Go; authored RLHF QA rubrics that drove a 12% lift on internal coding benchmarks."
+        },
+        {
+          "enabled": true,
+          "id": "afterquery-adversarial-benchmarks",
+          "keywords": [
+            "Docker",
+            "terminal benchmarks",
+            "multi-step reasoning",
+            "Claude",
+            "GPT-4"
+          ],
+          "priority": 82,
+          "tags": [
+            "llm-evaluation",
+            "docker",
+            "benchmarks"
+          ],
+          "text": "Engineered adversarial Docker-based terminal benchmarks (AfterQuery) exposing multi-step reasoning gaps in SOTA models (Claude, GPT-4); built reproducible harnesses targeting tasks beyond current LLM capability."
+        }
+      ],
+      "dates": "Jun 2023 -- Mar 2025",
+      "enabled": true,
+      "id": "independent-ai-consultant",
+      "keywords": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "CI/CD",
+        "RLHF",
+        "Python",
+        "TypeScript",
+        "Go",
+        "Docker"
+      ],
+      "location": "Remote",
+      "organization": "Independent Software Engineer & AI Consultant",
+      "priority": 86,
+      "tags": [
+        "consulting",
+        "full-stack",
+        "llm-evaluation",
+        "rlhf"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Python",
+        "TypeScript",
+        "Go",
+        "Docker"
+      ],
+      "title": "Contract -- Multiple Clients"
+    }
+  ],
+  "projects": [
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "agrisetu-voice-marketplace",
+          "keywords": [
+            "voice-first marketplace",
+            "collective group ordering",
+            "11 Indian languages",
+            "AWS Transcribe",
+            "GLM-4.7 Flash",
+            "Polly TTS",
+            "WebSocket streaming"
+          ],
+          "priority": 100,
+          "tags": [
+            "voice",
+            "aws",
+            "marketplace",
+            "websocket"
+          ],
+          "text": "Built a voice-first marketplace enabling farmers to procure agricultural supplies via collective group ordering; real-time pipeline streams PCM audio over WebSocket to AWS Transcribe (11 Indian languages), processes through GLM-4.7 Flash on Bedrock, and returns speech via Polly TTS --- Turborepo monorepo (Flutter, Next.js, Express/TypeScript) with GitHub Actions CI/CD."
+        },
+        {
+          "enabled": true,
+          "id": "agrisetu-rag",
+          "keywords": [
+            "RAG",
+            "Titan Embeddings v2",
+            "Bedrock Knowledge Base",
+            "domain corpus",
+            "regional dialect"
+          ],
+          "priority": 90,
+          "tags": [
+            "rag",
+            "aws",
+            "llm"
+          ],
+          "text": "RAG pipeline (Titan Embeddings v2 + Bedrock Knowledge Base) grounds crop-market responses in domain corpus, cutting hallucination on regional dialect queries."
+        },
+        {
+          "enabled": true,
+          "id": "agrisetu-cluster-procurement",
+          "keywords": [
+            "farmer clustering",
+            "50km radius",
+            "Bayesian vendor ranking",
+            "payment orchestration",
+            "stale cluster sweeping",
+            "Prisma"
+          ],
+          "priority": 86,
+          "tags": [
+            "systems-design",
+            "postgresql",
+            "marketplace"
+          ],
+          "text": "Designed cluster-based procurement engine: farmers within 50km radius are aggregated for collective orders; Bayesian rating system ranks vendor bids; cluster state machine manages payment deadlines, reconciliation, and stale-cluster sweeping via Prisma/PostgreSQL."
+        },
+        {
+          "enabled": true,
+          "id": "agrisetu-flutter-mobile",
+          "keywords": [
+            "Flutter",
+            "Riverpod",
+            "Dio",
+            "Retrofit",
+            "Go Router",
+            "Firebase messaging",
+            "geolocation",
+            "audio recording"
+          ],
+          "priority": 80,
+          "tags": [
+            "flutter",
+            "mobile",
+            "geolocation"
+          ],
+          "text": "Delivered Flutter mobile app for farmers with Riverpod state management, Dio/Retrofit HTTP layer, geolocation-based vendor discovery, in-app audio recording/playback, Firebase push notifications, and secure token storage."
+        }
+      ],
+      "dates": "Feb -- Apr 2026",
+      "enabled": true,
+      "id": "agrisetu",
+      "keywords": [
+        "voice-first marketplace",
+        "AWS Transcribe",
+        "AWS Bedrock",
+        "Polly TTS",
+        "RAG",
+        "Titan Embeddings",
+        "Flutter",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "WebSocket",
+        "Bayesian rating",
+        "cluster procurement",
+        "multilingual",
+        "TypeScript"
+      ],
+      "link": {
+        "kind": "github",
+        "label": "GitHub",
+        "url": "https://github.com/taylorreed-dev/agrisetu"
+      },
+      "name": "AGRISETU -- AI Voice-First Agricultural Marketplace",
+      "priority": 96,
+      "role": "TypeScript, Express.js, Next.js, Flutter, PostgreSQL, Prisma, AWS Bedrock, Transcribe, Polly, WebSocket, Turborepo",
+      "tags": [
+        "ai",
+        "voice",
+        "marketplace",
+        "aws",
+        "mobile",
+        "full-stack",
+        "flutter",
+        "websocket",
+        "typescript"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Express.js",
+        "Next.js",
+        "Flutter",
+        "PostgreSQL",
+        "Prisma",
+        "AWS Bedrock",
+        "AWS Transcribe",
+        "AWS Polly",
+        "AWS Translate",
+        "AWS S3",
+        "Firebase Admin",
+        "WebSocket",
+        "Zod",
+        "Vitest",
+        "Turborepo",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "turbocrawl-architecture",
+          "keywords": [
+            "MCP server",
+            "Spring Boot 3.5",
+            "C++20",
+            "gRPC",
+            "Protobuf3",
+            "Streamable HTTP",
+            "STDIO",
+            "Model Context Protocol",
+            "dual-service"
+          ],
+          "priority": 96,
+          "tags": [
+            "systems-design",
+            "mcp",
+            "grpc",
+            "cpp",
+            "java"
+          ],
+          "text": "Engineered dual-service MCP server (Spring Boot 3.5 + C++20 gRPC worker) exposing 4 Model Context Protocol tools (crawl_webpage, crawl_site, get_crawl_result, search_crawled_content) over Streamable HTTP and STDIO transports; Protobuf3 contract drives cross-language gRPC RPCs; site crawls run via @Async @Transactional Spring executor backed by Redis job queue and PostgreSQL persistence."
+        },
+        {
+          "enabled": true,
+          "id": "turbocrawl-safety-crawling",
+          "keywords": [
+            "SSRF protection",
+            "RFC1918",
+            "per-domain rate limiting",
+            "robots.txt",
+            "polite crawling",
+            "LLM-ready Markdown",
+            "untrusted content labeling",
+            "priority-weighted BFS"
+          ],
+          "priority": 88,
+          "tags": [
+            "security",
+            "systems-design",
+            "llm",
+            "crawling"
+          ],
+          "text": "Implemented 3-tier URL security model: scheme + host validation → configurable domain allowlist/blocklist → RFC1918/loopback SSRF blocking (Java InetAddress resolution + C++ host literal regex); per-domain rate limiting, robots.txt enforcement, and regex-based exclusion patterns; gRPC client catches StatusRuntimeException and returns a graceful LLM-ready fallback document rather than propagating failures."
+        },
+        {
+          "enabled": true,
+          "id": "turbocrawl-search-infra",
+          "keywords": [
+            "Elasticsearch",
+            "full-text search",
+            "field-boosted multi_match",
+            "Docker Compose",
+            "Spring AI MCP",
+            "HTML-to-Markdown",
+            "content extraction"
+          ],
+          "priority": 80,
+          "tags": [
+            "elasticsearch",
+            "search",
+            "infrastructure",
+            "docker"
+          ],
+          "text": "C++ pipeline strips scripts/styles/nav/cookie banners via regex before converting headings, lists, and code blocks to Markdown; every document prefixed with an UNTRUSTED blockquote in the converter itself; Elasticsearch indexed by URL-hash doc ID for idempotent re-crawls; field-boosted multi_match search (title×3, summary×2) with domain filter and highlighted snippets."
+        }
+      ],
+      "dates": "May 2026",
+      "enabled": true,
+      "id": "turbocrawl",
+      "keywords": [
+        "MCP server",
+        "Model Context Protocol",
+        "Spring Boot",
+        "C++20",
+        "gRPC",
+        "Protobuf",
+        "Elasticsearch",
+        "PostgreSQL",
+        "Redis",
+        "SSRF protection",
+        "polite crawling",
+        "robots.txt",
+        "LLM-ready",
+        "async job queue",
+        "Docker",
+        "libcurl",
+        "Spring AI"
+      ],
+      "link": {
+        "kind": "github",
+        "label": "GitHub",
+        "url": "https://github.com/taylorreed-dev/turbocrawl"
+      },
+      "name": "TURBOCRAWL -- LLM-Ready MCP Web Crawler",
+      "priority": 94,
+      "role": "Java 21, Spring Boot, C++20, gRPC, Protobuf, Elasticsearch, PostgreSQL, Redis, Docker",
+      "tags": [
+        "mcp",
+        "systems-design",
+        "grpc",
+        "cpp",
+        "java",
+        "spring-boot",
+        "elasticsearch",
+        "llm",
+        "security"
+      ],
+      "technologies": [
+        "Java 21",
+        "Spring Boot 3.5",
+        "Spring AI MCP",
+        "C++20",
+        "gRPC 1.68",
+        "Protobuf3",
+        "CMake",
+        "libcurl",
+        "Elasticsearch 8.15",
+        "PostgreSQL 16",
+        "Redis 7",
+        "Spring Data JPA",
+        "Docker Compose"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "gofetch-segmented-download-engine",
+          "keywords": [
+            "concurrent HTTP range downloads",
+            "goroutine worker pool",
+            "SHA256 task persistence",
+            "ETag validation",
+            "byte range splitting",
+            "resumable downloads",
+            "atomic file writes"
+          ],
+          "priority": 96,
+          "tags": [
+            "go",
+            "concurrency",
+            "systems-programming",
+            "http"
+          ],
+          "text": "Engineered concurrent segmented HTTP download engine in Go: probes server range support via HEAD/GET fallback, splits files into configurable byte ranges across a goroutine worker pool (default 4 workers), persists progress as SHA256-keyed JSON task files, and validates ETag/Last-Modified on resume to detect server-side file changes; atomic temp-file rename prevents partial-write corruption."
+        },
+        {
+          "enabled": true,
+          "id": "gofetch-bubbletea-tui",
+          "keywords": [
+            "BubbleTea",
+            "terminal UI",
+            "per-segment progress",
+            "real-time speed",
+            "250ms tick",
+            "pause/resume",
+            "lipgloss"
+          ],
+          "priority": 86,
+          "tags": [
+            "tui",
+            "go",
+            "bubbletea"
+          ],
+          "text": "Built BubbleTea terminal UI with per-segment progress bars and individual speed meters updated on a 250ms tick; pause/quit controls and color-coded status indicators --- progress callbacks decouple download logic from the UI layer via a Model-View-Update architecture."
+        },
+        {
+          "enabled": true,
+          "id": "gofetch-mirror-bench",
+          "keywords": [
+            "website mirroring",
+            "same-host crawling",
+            "HTML/CSS link extraction",
+            "mirror benchmarking",
+            "throughput ranking",
+            "URL list batch downloads",
+            "robots.txt-aware"
+          ],
+          "priority": 76,
+          "tags": [
+            "go",
+            "crawling",
+            "benchmarking"
+          ],
+          "text": "Implemented concurrent same-host website mirroring with regex-based link extraction from HTML attributes and CSS url() rules, reconstructing the original directory structure locally; mirror benchmarking samples 4 MiB from each candidate and ranks by throughput; URL list mode supports batch downloads from text files with per-entry comment support."
+        }
+      ],
+      "dates": "Apr 2026",
+      "enabled": true,
+      "id": "gofetch",
+      "keywords": [
+        "Go",
+        "concurrent downloads",
+        "HTTP range requests",
+        "goroutine worker pool",
+        "BubbleTea",
+        "terminal UI",
+        "resumable downloads",
+        "SHA256 task persistence",
+        "website mirroring",
+        "mirror benchmarking",
+        "atomic file writes",
+        "ETag validation"
+      ],
+      "link": {
+        "kind": "github",
+        "label": "GitHub",
+        "url": "https://github.com/taylorreed-dev/gofetch"
+      },
+      "name": "GOFETCH -- Concurrent Download Manager",
+      "priority": 92,
+      "role": "Go 1.25, BubbleTea, lipgloss, net/http, goroutines",
+      "tags": [
+        "go",
+        "systems-programming",
+        "cli",
+        "concurrency",
+        "tui"
+      ],
+      "technologies": [
+        "Go 1.25",
+        "BubbleTea",
+        "lipgloss",
+        "net/http",
+        "sync",
+        "encoding/json",
+        "crypto/sha256",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "warpshare-zero-storage",
+          "keywords": [
+            "zero-server-storage",
+            "P2P file transfer",
+            "256KB chunk batching",
+            "retry-backoff",
+            "ephemeral Redis share links",
+            "exponential backoff"
+          ],
+          "priority": 96,
+          "tags": [
+            "webrtc",
+            "architecture",
+            "redis"
+          ],
+          "text": "Architected zero-server-storage P2P file transfer (Next.js 15 + PeerJS/WebRTC) with 256KB chunk batching, 3-concurrent-send pipeline, exponential retry-backoff (600ms delay, 3 retries), and ephemeral Redis share links (30-min TTL); handles arbitrarily large files with no cloud dependency."
+        },
+        {
+          "enabled": true,
+          "id": "warpshare-pairing-deploy",
+          "keywords": [
+            "transfer speed metrics",
+            "QR-code peer pairing",
+            "Turbopack",
+            "Vercel edge",
+            "cold-start"
+          ],
+          "priority": 84,
+          "tags": [
+            "metrics",
+            "developer-experience",
+            "edge"
+          ],
+          "text": "Built transfer speed metrics and QR-code peer pairing; configured Turbopack for 5--10x faster dev rebuilds; deployed on Vercel's edge network with sub-500ms global cold-start."
+        }
+      ],
+      "dates": "Dec 2024 -- Mar 2025",
+      "enabled": true,
+      "id": "warpshare",
+      "keywords": [
+        "P2P file transfer",
+        "WebRTC",
+        "PeerJS",
+        "Redis",
+        "Next.js",
+        "TypeScript",
+        "Vercel",
+        "chunked transfer",
+        "retry-backoff",
+        "exponential backoff"
+      ],
+      "link": {
+        "kind": "github",
+        "label": "GitHub",
+        "url": "https://github.com/taylorreed-dev/p2p-share"
+      },
+      "name": "WARPSHARE -- Serverless P2P File Sharing",
+      "priority": 90,
+      "role": "Next.js 15, PeerJS/WebRTC, Redis, TypeScript, Tailwind CSS",
+      "tags": [
+        "webrtc",
+        "nextjs",
+        "redis",
+        "peer-to-peer",
+        "typescript"
+      ],
+      "technologies": [
+        "Next.js 15",
+        "PeerJS",
+        "WebRTC",
+        "Redis",
+        "TypeScript",
+        "Tailwind CSS",
+        "Turbopack",
+        "Vercel",
+        "ioredis",
+        "jszip",
+        "qrcode.react"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "cvpilot-agentic-pipeline",
+          "keywords": [
+            "agentic resume pipeline",
+            "strict-truth prompting",
+            "base_template.tex",
+            "worktree",
+            "ATS keyword alignment"
+          ],
+          "priority": 92,
+          "tags": [
+            "agentic-ai",
+            "resume",
+            "automation"
+          ],
+          "text": "Agentic resume pipeline via Claude Code skill; strict-truth prompting anchors edits to base_template.tex, preventing hallucination; each application isolated in a Git worktree, compiled via tectonic with automated ATS keyword alignment."
+        },
+        {
+          "enabled": true,
+          "id": "cvpilot-stateful-workflow",
+          "keywords": [
+            "two-stage prepare/finalize workflow",
+            "JSON state handoff",
+            "sandboxed output paths",
+            "auto-clean"
+          ],
+          "priority": 84,
+          "tags": [
+            "workflow",
+            "git",
+            "rendering"
+          ],
+          "text": "Two-stage prepare/finalize workflow with JSON state handoff and sandboxed output paths; per-application worktree branches auto-clean post-render, keeping the canonical base immutable across tailored applications."
+        },
+        {
+          "enabled": true,
+          "id": "cvpilot-multi-agent-lock",
+          "keywords": [
+            "PID-based cooperative lock",
+            "multi-agent concurrency",
+            "stale lock auto-heal",
+            "os.kill liveness check",
+            "parallel agent safety"
+          ],
+          "priority": 80,
+          "tags": [
+            "concurrency",
+            "multi-agent",
+            "systems-design",
+            "automation"
+          ],
+          "text": "Implemented PID-based cooperative lock (.refresh-base.lock) serialising concurrent refresh-base runs and blocking tailor-job snapshots while db.json/base_template.tex are mid-edit; stale locks auto-heal via os.kill(pid, 0) liveness check, enabling safe parallel tailoring across isolated git worktrees."
+        }
+      ],
+      "dates": "Apr 2026",
+      "enabled": true,
+      "id": "cvpilot",
+      "keywords": [
+        "Claude Code skill",
+        "LaTeX",
+        "tectonic",
+        "Git worktrees",
+        "ATS keyword alignment",
+        "strict-truth prompting",
+        "PID-based locking",
+        "multi-agent concurrency"
+      ],
+      "link": {
+        "kind": "github",
+        "label": "GitHub",
+        "url": "https://github.com/taylorreed-dev/cvpilot"
+      },
+      "name": "CVPILOT -- Agentic Resume Tailoring System",
+      "priority": 88,
+      "role": "Python, Claude Code Skill API, LaTeX, tectonic, Git Worktrees",
+      "tags": [
+        "agentic-ai",
+        "automation",
+        "latex",
+        "developer-tools"
+      ],
+      "technologies": [
+        "Python",
+        "Claude Code Skill API",
+        "LaTeX",
+        "tectonic",
+        "Git Worktrees"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "searchio-aggregator",
+          "keywords": [
+            "parallel addon queries",
+            "deduplication ranking",
+            "cached > pending > direct > magnet",
+            "stale-result filtering",
+            "activeScanRef"
+          ],
+          "priority": 88,
+          "tags": [
+            "async",
+            "typescript",
+            "deduplication"
+          ],
+          "text": "Built Stremio stream aggregator (React 18, TypeScript, Vite) querying multiple streaming addons in parallel; deduplication/ranking algorithm (cached > pending > direct > magnet) with stale-result filtering via activeScanRef scan-ID pattern to discard out-of-order async responses."
+        },
+        {
+          "enabled": true,
+          "id": "searchio-protocol",
+          "keywords": [
+            "TMDB API",
+            "Stremio manifest protocol",
+            "localStorage persistence",
+            "Vitest unit tests",
+            "subtitle addons"
+          ],
+          "priority": 78,
+          "tags": [
+            "api",
+            "typescript",
+            "testing"
+          ],
+          "text": "Implemented Stremio transport protocol (manifest validation, stream normalisation) and TMDB API client with Bearer token auth; localStorage-persisted addon configuration; Vitest unit tests for core library modules; subtitle addon support with separate management tab."
+        }
+      ],
+      "dates": "2025",
+      "enabled": true,
+      "id": "searchio",
+      "keywords": [
+        "stream aggregation",
+        "parallel async",
+        "TMDB API",
+        "Stremio transport protocol",
+        "deduplication",
+        "ranking",
+        "TypeScript",
+        "Vitest"
+      ],
+      "link": null,
+      "name": "SEARCHIO -- Stremio Stream Aggregator",
+      "priority": 82,
+      "role": "React, TypeScript, Vite, TMDB API, Stremio Protocol",
+      "tags": [
+        "typescript",
+        "react",
+        "async",
+        "api-aggregation",
+        "web"
+      ],
+      "technologies": [
+        "React 18",
+        "TypeScript",
+        "Vite",
+        "Vitest",
+        "TMDB API",
+        "Stremio Protocol",
+        "localStorage",
+        "Lucide React"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "stremio-ai-search-core",
+          "keywords": [
+            "v1.0.64",
+            "6500+ LOC",
+            "Gemini API",
+            "LRU caching",
+            "multi-layer cache",
+            "TMDB 7-day cache",
+            "personalized recommendations"
+          ],
+          "priority": 88,
+          "tags": [
+            "ai",
+            "caching",
+            "production"
+          ],
+          "text": "Built production Stremio AI addon (v1.0.64, 6,500+ LOC) delivering personalised movie/TV recommendations via Gemini API; multi-layer LRU caching (AI results, TMDB catalog, RPDB posters, Trakt history) with configurable TTLs significantly reduces repeat API calls."
+        },
+        {
+          "enabled": true,
+          "id": "stremio-ai-search-infra",
+          "keywords": [
+            "Trakt.tv OAuth",
+            "SQLite tokens",
+            "admin cache API",
+            "rate limiting",
+            "encrypted config",
+            "Vercel serverless",
+            "Docker"
+          ],
+          "priority": 78,
+          "tags": [
+            "nodejs",
+            "serverless",
+            "oauth"
+          ],
+          "text": "Implemented Trakt.tv OAuth workflow with SQLite token storage for personalised watch-history integration; admin API for cache statistics and invalidation; rate limiting, compression, and encrypted API key storage; dual deployment targets (Vercel serverless + self-hosted Docker)."
+        }
+      ],
+      "dates": "2025 -- Present",
+      "enabled": true,
+      "id": "stremio-ai-search",
+      "keywords": [
+        "Stremio addon",
+        "Gemini API",
+        "LRU caching",
+        "TMDB integration",
+        "Trakt.tv",
+        "RPDB",
+        "personalized recommendations",
+        "rate limiting",
+        "SQLite",
+        "serverless"
+      ],
+      "link": null,
+      "name": "STREMIO AI SEARCH -- AI Recommendation Addon",
+      "priority": 80,
+      "role": "Node.js, Express, Gemini API, SQLite, LRU-Cache, Vercel",
+      "tags": [
+        "nodejs",
+        "ai",
+        "recommendation",
+        "caching",
+        "vercel",
+        "production"
+      ],
+      "technologies": [
+        "Node.js",
+        "Express",
+        "Gemini API",
+        "SQLite",
+        "LRU-Cache",
+        "TMDB API",
+        "Stremio Addon SDK",
+        "Vercel",
+        "Docker",
+        "express-rate-limit"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "trackzero-app",
+          "keywords": [
+            "Next.js 14",
+            "Firebase Firestore",
+            "real-time multi-device sync",
+            "Google OAuth",
+            "email auth",
+            "trackzero.taylorreed.dev"
+          ],
+          "priority": 86,
+          "tags": [
+            "firebase",
+            "full-stack",
+            "realtime"
+          ],
+          "text": "Built full-stack habit tracking app (Next.js 14, React 18, TypeScript) with Firebase Firestore for real-time multi-device sync and Google OAuth + email authentication; deployed live at trackzero.taylorreed.dev."
+        },
+        {
+          "enabled": true,
+          "id": "trackzero-ux",
+          "keywords": [
+            "GitHub-style activity calendar",
+            "streak tracking",
+            "journal entries",
+            "Framer Motion",
+            "Radix UI",
+            "accessible components"
+          ],
+          "priority": 76,
+          "tags": [
+            "ux",
+            "animation",
+            "accessibility"
+          ],
+          "text": "Implemented GitHub-style activity calendar, streak visualisation, and daily journal entries with Framer Motion micro-interactions; Radix UI primitives for accessible component system; Tailwind CSS mobile-first responsive design."
+        }
+      ],
+      "dates": "2025",
+      "enabled": true,
+      "id": "trackzero",
+      "keywords": [
+        "habit tracking",
+        "Firebase Firestore",
+        "real-time sync",
+        "Google OAuth",
+        "Framer Motion",
+        "Radix UI",
+        "activity calendar",
+        "streak tracking"
+      ],
+      "link": {
+        "kind": "web",
+        "label": "Live",
+        "url": "https://trackzero.taylorreed.dev"
+      },
+      "name": "TRACKZERO -- No-Zero-Day Habit Tracker",
+      "priority": 78,
+      "role": "Next.js 14, React, TypeScript, Firebase, Tailwind CSS, Framer Motion",
+      "tags": [
+        "full-stack",
+        "firebase",
+        "nextjs",
+        "typescript",
+        "web"
+      ],
+      "technologies": [
+        "Next.js 14",
+        "React 18",
+        "TypeScript",
+        "Firebase Firestore",
+        "Firebase Auth",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Radix UI",
+        "Vercel"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "cloudpad-pwa",
+          "keywords": [
+            "offline-first PWA",
+            "IndexedDB persistence",
+            "service worker",
+            "Workbox caching",
+            "installable",
+            "multi-tab",
+            "client-side PDF export"
+          ],
+          "priority": 80,
+          "tags": [
+            "pwa",
+            "offline",
+            "indexeddb"
+          ],
+          "text": "Built offline-first markdown notepad as installable PWA (React 18, Vite, Workbox); IndexedDB persistence with multi-tab sync via storage events; client-side PDF export via @react-pdf/renderer; sub-second offline load after initial install."
+        },
+        {
+          "enabled": true,
+          "id": "cloudpad-ux",
+          "keywords": [
+            "7-dimension customisation",
+            "theme",
+            "font",
+            "layout",
+            "density",
+            "accent color",
+            "guided onboarding tour",
+            "localStorage"
+          ],
+          "priority": 70,
+          "tags": [
+            "ux",
+            "customization",
+            "onboarding"
+          ],
+          "text": "Implemented 7-dimension customisation system (theme, font, layout density, sidebar position, accent colour) with localStorage persistence; interactive guided onboarding tour; keyboard shortcuts panel; responsive mobile layout."
+        }
+      ],
+      "dates": "2025",
+      "enabled": true,
+      "id": "cloudpad",
+      "keywords": [
+        "PWA",
+        "offline-first",
+        "IndexedDB",
+        "Workbox",
+        "service worker",
+        "client-side PDF export",
+        "markdown",
+        "Vite",
+        "installable"
+      ],
+      "link": null,
+      "name": "CLOUDPAD -- Offline-First Markdown Notepad PWA",
+      "priority": 72,
+      "role": "React, Vite, IndexedDB, Workbox, @react-pdf/renderer",
+      "tags": [
+        "pwa",
+        "react",
+        "offline-first",
+        "indexeddb",
+        "web"
+      ],
+      "technologies": [
+        "React 18",
+        "Vite",
+        "IndexedDB",
+        "Workbox",
+        "@react-pdf/renderer",
+        "vite-plugin-pwa",
+        "CSS"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "ai-battle-arena-core",
+          "keywords": [
+            "dual LLM benchmarking",
+            "Canvas 2D",
+            "60 FPS physics loop",
+            "JSON action protocol",
+            "prediction-based projectile leading",
+            "real-time latency tracking"
+          ],
+          "priority": 76,
+          "tags": [
+            "llm-evaluation",
+            "canvas",
+            "game-physics"
+          ],
+          "text": "Built interactive LLM benchmarking arena (Vite, Canvas API) where two AI models compete in real-time space shooter; fixed 60 FPS physics loop with accumulator pattern, prediction-based projectile leading, and JSON action protocol; real-time per-model latency tracking."
+        },
+        {
+          "enabled": true,
+          "id": "ai-battle-arena-protocol",
+          "keywords": [
+            "OpenAI-compatible",
+            "conversation history compaction",
+            "7-message window",
+            "stale response protection",
+            "timestamp validation",
+            "in-flight request deduplication"
+          ],
+          "priority": 68,
+          "tags": [
+            "llm-evaluation",
+            "multi-api"
+          ],
+          "text": "Supports any OpenAI-compatible API endpoint (OpenAI, Anthropic, generic); conversation history compacted to 7-message window to reduce token usage; stale response protection via timestamp validation and in-flight request deduplication; localStorage-persisted model configuration."
+        }
+      ],
+      "dates": "2025",
+      "enabled": true,
+      "id": "ai-battle-arena",
+      "keywords": [
+        "AI model benchmarking",
+        "Canvas 2D",
+        "game physics",
+        "JSON action protocol",
+        "latency tracking",
+        "OpenAI-compatible API",
+        "conversation history compaction",
+        "stale response protection"
+      ],
+      "link": null,
+      "name": "AI BATTLE ARENA -- LLM Model Benchmark Game",
+      "priority": 70,
+      "role": "Vite, Canvas API, JavaScript, OpenAI-compatible APIs",
+      "tags": [
+        "llm-evaluation",
+        "canvas",
+        "benchmarks",
+        "javascript",
+        "web"
+      ],
+      "technologies": [
+        "Vite",
+        "Canvas API",
+        "JavaScript",
+        "OpenAI API",
+        "Anthropic API",
+        "localStorage"
+      ]
+    },
+    {
+      "bullets": [
+        {
+          "enabled": true,
+          "id": "metro-ticket-booking-core",
+          "keywords": [
+            "Spring Boot 3.4",
+            "Java 17",
+            "React 19",
+            "PostgreSQL",
+            "Spring Data JPA",
+            "Maven frontend embedding",
+            "Docker Compose",
+            "ticket lifecycle"
+          ],
+          "priority": 62,
+          "tags": [
+            "java",
+            "spring-boot",
+            "full-stack"
+          ],
+          "text": "Built full-stack metro ticketing system (Spring Boot 3.4, Java 17, React 19/TypeScript, PostgreSQL/JPA); ticket lifecycle management with entry/exit gate validation and price calculation; Maven build embeds frontend dist into Spring static resources for single-JAR deployment; Docker Compose for local dev."
+        }
+      ],
+      "dates": "2025",
+      "enabled": true,
+      "id": "metro-ticket-booking",
+      "keywords": [
+        "Spring Boot",
+        "Java 17",
+        "React 19",
+        "TypeScript",
+        "PostgreSQL",
+        "JPA",
+        "Lombok",
+        "Docker Compose",
+        "Maven"
+      ],
+      "link": null,
+      "name": "METRO TICKET BOOKING -- Full-Stack Transit System",
+      "priority": 55,
+      "role": "Spring Boot 3, Java 17, React, TypeScript, PostgreSQL, Docker",
+      "tags": [
+        "java",
+        "spring-boot",
+        "full-stack",
+        "postgresql",
+        "docker"
+      ],
+      "technologies": [
+        "Spring Boot 3.4",
+        "Java 17",
+        "React 19",
+        "TypeScript",
+        "PostgreSQL",
+        "Spring Data JPA",
+        "Lombok",
+        "Maven",
+        "Docker Compose",
+        "Vite"
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "sectionOrder": [
+    "summaries",
+    "education",
+    "experience",
+    "projects",
+    "skills",
+    "awards"
+  ],
+  "skills": [
+    {
+      "enabled": true,
+      "id": "languages",
+      "items": [
+        "JavaScript/TypeScript",
+        "Python",
+        "C/C++",
+        "Java",
+        "Go",
+        "Dart",
+        "Bash",
+        "SQL"
+      ],
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "C",
+        "C++",
+        "Java",
+        "Go",
+        "Dart",
+        "Bash",
+        "Shell",
+        "SQL",
+        "LaTeX",
+        "Rust"
+      ],
+      "label": "Languages",
+      "priority": 100,
+      "tags": [
+        "programming-languages"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "backend-frameworks",
+      "items": [
+        "FastAPI",
+        "Express.js",
+        "Node.js",
+        "Spring Boot",
+        "Celery",
+        "RQ",
+        "gRPC",
+        "GraphQL",
+        "REST",
+        "WebSocket",
+        "JWT",
+        "OAuth 2.0"
+      ],
+      "keywords": [
+        "FastAPI",
+        "Express.js",
+        "Node.js",
+        "Spring Boot",
+        "Flask",
+        "Gin",
+        "Uvicorn",
+        "Starlette",
+        "WebSocket",
+        "Pydantic",
+        "Zod",
+        "REST API",
+        "gRPC",
+        "GraphQL",
+        "ASGI",
+        "Celery",
+        "RQ",
+        "APScheduler",
+        "Schedule",
+        "Swagger",
+        "OpenAPI",
+        "JWT",
+        "OAuth 2.0"
+      ],
+      "label": "Backend",
+      "priority": 97,
+      "tags": [
+        "backend",
+        "python",
+        "nodejs",
+        "java",
+        "api"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "databases",
+      "items": [
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL",
+        "Redis",
+        "Kafka",
+        "RabbitMQ",
+        "Elasticsearch",
+        "SQLAlchemy",
+        "Prisma",
+        "Alembic"
+      ],
+      "keywords": [
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL",
+        "Redis",
+        "Aurora",
+        "SQLite",
+        "Elasticsearch",
+        "DynamoDB",
+        "ClickHouse",
+        "Kafka",
+        "RabbitMQ",
+        "Redis Pub/Sub",
+        "RQ",
+        "SQLAlchemy",
+        "Prisma",
+        "Sequelize",
+        "Alembic",
+        "Spring Data JPA",
+        "ioredis",
+        "pymongo",
+        "psycopg2",
+        "sharding",
+        "replication"
+      ],
+      "label": "Databases & Queues",
+      "priority": 96,
+      "tags": [
+        "databases",
+        "postgresql",
+        "mongodb",
+        "redis",
+        "kafka",
+        "orm",
+        "search"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "infrastructure",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Terraform",
+        "Prometheus",
+        "Grafana",
+        "GitHub Actions",
+        "CI/CD",
+        "Nginx",
+        "Linux"
+      ],
+      "keywords": [
+        "Docker",
+        "Docker Compose",
+        "Kubernetes",
+        "Helm",
+        "AWS",
+        "ECS",
+        "EC2",
+        "S3",
+        "SSM",
+        "Lambda",
+        "RDS",
+        "CloudWatch",
+        "GitHub Actions",
+        "Bitbucket Pipelines",
+        "GitLab CI",
+        "Jenkins",
+        "Vercel",
+        "Nginx",
+        "Terraform",
+        "Ansible",
+        "Prometheus",
+        "Grafana",
+        "Sentry",
+        "Datadog",
+        "OpenTelemetry",
+        "ELK",
+        "blue-green deployments",
+        "CI/CD",
+        "Linux",
+        "pm2",
+        "systemd",
+        "multi-environment",
+        "IaC"
+      ],
+      "label": "Infrastructure & DevOps",
+      "priority": 92,
+      "tags": [
+        "aws",
+        "docker",
+        "kubernetes",
+        "cicd",
+        "devops",
+        "monitoring",
+        "terraform"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "ai-ml",
+      "items": [
+        "LLMs",
+        "RAG",
+        "RLHF",
+        "AWS Bedrock",
+        "LangChain",
+        "Pinecone",
+        "Deepgram",
+        "LiteLLM",
+        "Prompt Engineering",
+        "Claude API",
+        "MCP",
+        "Vector Search",
+        "Embeddings",
+        "Hugging Face"
+      ],
+      "keywords": [
+        "LLMs",
+        "RAG",
+        "RLHF",
+        "Vector Search",
+        "MCP",
+        "AWS Bedrock",
+        "Prompt Engineering",
+        "Claude API",
+        "LangChain",
+        "Pinecone",
+        "Weaviate",
+        "LiteLLM",
+        "Deepgram",
+        "Gemini",
+        "OpenAI",
+        "Hugging Face",
+        "Fine-tuning",
+        "Embeddings",
+        "Semantic Search",
+        "Anthropic",
+        "FetchAI uAgents",
+        "ASR",
+        "TTS",
+        "LLM evaluation",
+        "Transformers"
+      ],
+      "label": "AI/ML",
+      "priority": 94,
+      "tags": [
+        "ai",
+        "llm",
+        "rag",
+        "vector-search",
+        "evaluation"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "concepts",
+      "items": [
+        "Microservices",
+        "Event-Driven Architecture",
+        "REST/gRPC/GraphQL",
+        "ACID & CAP Theorem",
+        "Pub/Sub",
+        "Rate Limiting",
+        "Idempotency",
+        "Caching Strategies",
+        "System Design",
+        "Agile/Scrum",
+        "TDD"
+      ],
+      "keywords": [
+        "Microservices",
+        "Event-Driven Architecture",
+        "CQRS",
+        "SAGA pattern",
+        "API Gateway",
+        "Service Mesh",
+        "Circuit Breaker",
+        "Rate Limiting",
+        "ACID",
+        "CAP Theorem",
+        "Eventual Consistency",
+        "Idempotency",
+        "Horizontal Scaling",
+        "Load Balancing",
+        "Caching Strategies",
+        "Pub/Sub",
+        "Message Queues",
+        "TDD",
+        "DDD",
+        "Clean Architecture",
+        "Agile",
+        "Scrum",
+        "System Design",
+        "REST",
+        "gRPC",
+        "GraphQL"
+      ],
+      "label": "Concepts",
+      "priority": 89,
+      "tags": [
+        "architecture",
+        "patterns",
+        "practices",
+        "distributed-systems"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "testing",
+      "items": [
+        "pytest",
+        "Jest",
+        "Vitest",
+        "Postman",
+        "OpenTelemetry",
+        "Prometheus",
+        "Grafana",
+        "Sentry"
+      ],
+      "keywords": [
+        "pytest",
+        "Jest",
+        "Vitest",
+        "Supertest",
+        "unittest",
+        "integration tests",
+        "unit tests",
+        "e2e tests",
+        "Postman",
+        "Swagger UI",
+        "OpenAPI",
+        "test coverage",
+        "OpenTelemetry",
+        "Prometheus",
+        "Grafana",
+        "Sentry",
+        "structured logging",
+        "ELK stack",
+        "Datadog"
+      ],
+      "label": "Testing & Observability",
+      "priority": 82,
+      "tags": [
+        "testing",
+        "observability",
+        "monitoring",
+        "quality"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "frontend-mobile",
+      "items": [
+        "React",
+        "Next.js",
+        "Flutter",
+        "Tailwind CSS",
+        "Vite",
+        "WebRTC",
+        "Framer Motion",
+        "Radix UI"
+      ],
+      "keywords": [
+        "React",
+        "Next.js",
+        "Flutter",
+        "Tailwind CSS",
+        "Vite",
+        "WebRTC",
+        "PeerJS",
+        "Framer Motion",
+        "Radix UI",
+        "Turbopack",
+        "Riverpod",
+        "Shadcn UI",
+        "Recharts",
+        "React Hook Form",
+        "Tanstack Query",
+        "Redux",
+        "Zustand",
+        "Workbox",
+        "PWA",
+        "IndexedDB",
+        "Canvas API",
+        "SSR",
+        "SSG",
+        "ISR",
+        "App Router",
+        "Pages Router"
+      ],
+      "label": "Frontend & Mobile",
+      "priority": 84,
+      "tags": [
+        "frontend",
+        "react",
+        "nextjs",
+        "flutter",
+        "mobile",
+        "web"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "integrations",
+      "items": [
+        "Razorpay",
+        "Stripe",
+        "Firebase",
+        "Twilio",
+        "Jitsi Meet",
+        "VideoSDK",
+        "ReportLab",
+        "Playwright"
+      ],
+      "keywords": [
+        "Razorpay",
+        "Stripe",
+        "Firebase FCM",
+        "Exotel",
+        "AiSensy",
+        "Twilio",
+        "SendGrid",
+        "Jitsi Meet",
+        "Zoom",
+        "VideoSDK",
+        "ReportLab",
+        "Playwright",
+        "Streamlit",
+        "pandas",
+        "numpy",
+        "openpyxl",
+        "googlemaps",
+        "Jinja2",
+        "Typer",
+        "Rich"
+      ],
+      "label": "Integrations & Tools",
+      "priority": 76,
+      "tags": [
+        "payments",
+        "notifications",
+        "video",
+        "observability"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "certifications",
+      "items": [
+        "AZ-201 Applied Algorithms & Data Structures (AlgoZenith)",
+        "Full Stack Open (Univ. of Helsinki)"
+      ],
+      "keywords": [
+        "Applied Algorithms",
+        "Data Structures",
+        "Full Stack Open"
+      ],
+      "label": "Certifications",
+      "priority": 70,
+      "tags": [
+        "certifications"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "interests",
+      "items": [
+        "Cybersecurity (CTF)",
+        "Street & Wildlife Photography",
+        "Filmmaking"
+      ],
+      "keywords": [
+        "Cybersecurity",
+        "CTF",
+        "Photography",
+        "Filmmaking"
+      ],
+      "label": "Interests",
+      "priority": 45,
+      "tags": [
+        "interests"
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "enabled": true,
+      "id": "ai-backend-generalist",
+      "keywords": [
+        "agentic AI systems",
+        "distributed services",
+        "RAG pipelines",
+        "voice AI",
+        "LLM evaluation",
+        "multi-tenant platforms",
+        "query speedup",
+        "AWS cost reduction",
+        "99.9% uptime"
+      ],
+      "priority": 98,
+      "tags": [
+        "backend",
+        "ai",
+        "agentic-ai",
+        "distributed-systems",
+        "generalist"
+      ],
+      "text": "Backend engineer with 3+ years shipping production agentic AI systems and distributed services end-to-end --- RAG pipelines, voice AI, and LLM evaluation harnesses built on the same backbone as high-availability, multi-tenant platforms. Measurable scale record: 10--100x query speedups, sub-50ms cached reads, and 25% AWS cost reduction at a 99.9% uptime SLA."
+    },
+    {
+      "enabled": true,
+      "id": "backend-agentic-systems",
+      "keywords": [
+        "Backend engineer",
+        "LLM application engineering",
+        "query/cache performance",
+        "AWS infrastructure",
+        "multi-tenant platforms",
+        "agentic systems"
+      ],
+      "priority": 100,
+      "tags": [
+        "backend",
+        "agentic-ai",
+        "distributed-systems",
+        "aws"
+      ],
+      "text": "Backend engineer with 3+ years shipping production agentic systems and distributed services end-to-end. Depth across LLM application engineering, query/cache performance, and AWS infrastructure, with delivery experience across high-availability services and multi-tenant clinic platforms."
+    },
+    {
+      "enabled": true,
+      "id": "fullstack-systems",
+      "keywords": [
+        "full-stack engineer",
+        "TypeScript",
+        "distributed systems",
+        "LLM integration",
+        "AWS",
+        "React",
+        "Node.js"
+      ],
+      "priority": 80,
+      "tags": [
+        "full-stack",
+        "distributed-systems",
+        "typescript",
+        "ai"
+      ],
+      "text": "Full-stack engineer with 3+ years building production distributed systems, LLM-integrated APIs, and data-driven web applications. Proficient across TypeScript, Python, and Go; experienced with AWS, PostgreSQL, Redis, and real-time pipeline architecture."
+    },
+    {
+      "enabled": true,
+      "id": "ai-llm-engineer",
+      "keywords": [
+        "LLM applications",
+        "RAG pipelines",
+        "agentic systems",
+        "RLHF",
+        "vector search",
+        "Pinecone",
+        "AWS Bedrock",
+        "Deepgram",
+        "prompt engineering",
+        "LLM evaluation"
+      ],
+      "priority": 95,
+      "tags": [
+        "ai",
+        "llm",
+        "rag",
+        "agentic-ai",
+        "ml-engineering"
+      ],
+      "text": "AI application engineer with 3+ years building production LLM applications end-to-end \u2014 RAG pipelines, agentic clinical documentation, RLHF evaluation frameworks, and multi-modal voice AI on AWS Bedrock. Deep fluency in prompt engineering, vector search (Pinecone), and LLM evaluation harness design; shipped AI-augmented features across healthtech, agricultural voice interfaces, and coding benchmark domains."
+    },
+    {
+      "enabled": true,
+      "id": "python-backend",
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "SQLAlchemy",
+        "PostgreSQL",
+        "Redis",
+        "Alembic",
+        "AWS",
+        "RQ",
+        "async",
+        "production codebase"
+      ],
+      "priority": 92,
+      "tags": [
+        "python",
+        "backend",
+        "fastapi",
+        "postgresql",
+        "aws"
+      ],
+      "text": "Python backend engineer with 3+ years building production FastAPI services, PostgreSQL schemas, and async worker pipelines. Hands-on depth with SQLAlchemy ORM (eager-loading optimisation, Alembic migrations), Redis Queue task orchestration, and multi-service AWS integrations (ECS, S3, SSM, Bedrock); 600+ commits across a 94,000-line production healthtech codebase serving 200+ API endpoints."
+    },
+    {
+      "enabled": true,
+      "id": "nodejs-typescript-backend",
+      "keywords": [
+        "Node.js",
+        "TypeScript",
+        "Express.js",
+        "Next.js",
+        "PostgreSQL",
+        "Prisma",
+        "WebSocket",
+        "Turborepo",
+        "REST API",
+        "monorepo"
+      ],
+      "priority": 85,
+      "tags": [
+        "nodejs",
+        "typescript",
+        "full-stack",
+        "monorepo",
+        "backend"
+      ],
+      "text": "TypeScript/Node.js engineer with 3+ years shipping full-stack distributed systems \u2014 from Turborepo monorepos with Express/Prisma/PostgreSQL backends and WebSocket streaming pipelines to serverless Next.js APIs with Redis session management and WebRTC data channels. Comfortable owning architecture, CI/CD, and deploy lifecycle solo or in a team."
+    },
+    {
+      "enabled": true,
+      "id": "distributed-systems-backend",
+      "keywords": [
+        "distributed systems",
+        "high availability",
+        "performance optimisation",
+        "PostgreSQL",
+        "Redis",
+        "ECS",
+        "Auto Scaling",
+        "blue-green deployments",
+        "99.9% uptime",
+        "async job processing"
+      ],
+      "priority": 88,
+      "tags": [
+        "distributed-systems",
+        "backend",
+        "performance",
+        "aws",
+        "infrastructure"
+      ],
+      "text": "Backend engineer with 3+ years designing and operating distributed production services under real load constraints. Delivered measurable systems improvements: 10\u2013100\u00d7 query speedup via ORM eager-loading optimisation, 25% AWS cost reduction through ECS fleet rightsizing, and 99.9% uptime SLA through blue-green deployment automation. Experienced across PostgreSQL/Aurora, Redis, RQ async queues, and AWS ECS with a track record of zero-downtime infra changes."
+    },
+    {
+      "enabled": true,
+      "id": "payments-fintech-backend",
+      "keywords": [
+        "payment orchestration",
+        "Razorpay",
+        "webhooks",
+        "idempotency",
+        "AES encryption",
+        "refunds",
+        "revenue attribution",
+        "PostgreSQL",
+        "async job processing"
+      ],
+      "priority": 82,
+      "tags": [
+        "payments",
+        "fintech",
+        "backend",
+        "razorpay",
+        "webhooks"
+      ],
+      "text": "Backend engineer with production experience designing end-to-end payment systems: Razorpay checkout and idempotent webhook pipelines, AES-encrypted order secret management, automated refund orchestration, and multi-flow revenue attribution across appointment, assessment, membership, and pay-in-clinic payment tracks. Strong foundation in distributed systems, PostgreSQL, and async RQ job processing."
+    },
+    {
+      "enabled": true,
+      "id": "startup-generalist-backend",
+      "keywords": [
+        "sole engineer",
+        "end-to-end ownership",
+        "shipped 8+ production apps",
+        "architecture",
+        "CI/CD",
+        "multi-tenant",
+        "fast delivery"
+      ],
+      "priority": 78,
+      "tags": [
+        "startup",
+        "generalist",
+        "backend",
+        "full-stack",
+        "ownership"
+      ],
+      "text": "Backend engineer built for high-ownership environments: shipped 8+ production applications as sole engineer before taking on a 94,000-line healthtech codebase \u2014 owning payment flows, notification infrastructure, LLM pipelines, scheduling engines, and AWS DevOps across a 13-month engagement. Fast to scope, fast to ship, fast to debug across Python, TypeScript, and Go."
+    },
+    {
+      "enabled": true,
+      "id": "healthtech-backend",
+      "keywords": [
+        "healthtech",
+        "clinical workflows",
+        "multi-clinic",
+        "multi-tenant",
+        "PostgreSQL",
+        "MongoDB",
+        "HIPAA-adjacent",
+        "appointment scheduling",
+        "clinical documentation",
+        "RAG"
+      ],
+      "priority": 75,
+      "tags": [
+        "healthtech",
+        "backend",
+        "multi-tenant",
+        "clinical",
+        "aws"
+      ],
+      "text": "Backend engineer with 13+ months building production healthtech infrastructure: multi-clinic appointment scheduling, polyglot persistence (PostgreSQL + MongoDB), Razorpay payment orchestration, clinical PDF generation, and AI-powered documentation via RAG/ASR pipelines. Experienced with regulated, multi-tenant data models and clinic-scoped access controls at production scale."
+    }
+  ],
+  "updatedAt": "2026-05-21"
+}

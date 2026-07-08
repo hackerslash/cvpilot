@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=0.38in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+
+\setcounter{secnumdepth}{0}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.95}
+
+% Standard, parser-friendly headings: uppercase label + full-width rule.
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{1.5pt}
+
+\setlist[itemize]{leftmargin=1.1em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\urlstyle{same}
+
+% Experience / Education row: organisation + location, then role + dates.
+% tabular* with \extracolsep{\fill} keeps a single left-to-right text
+% stream, which ATS parsers extract in reading order.
+\newcommand{\resumeentry}[4]{%
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{1pt}%
+}
+
+% Project row: name + repo/link and dates on line one; the tech stack sits
+% on its own full-width italic line below so long stacks wrap cleanly and
+% never collide with the right column.
+\newcommand{\projectentry}[4]{%
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1}\enspace#2 & #4 \\
+  \end{tabular*}\par\nobreak
+  {\itshape #3}\par\vspace{1pt}%
+}
+
+\begin{document}
+\fontsize{10.0}{12.0}\selectfont
+
+\begin{center}
+  {\LARGE\bfseries TAYLOR REED} \\[2pt]
+  {\large Backend Engineer} \\[3pt]
+  \href{https://maps.google.com/?q=Austin,TX}{\faMapMarker*\ Austin, TX}
+  \,|\, \href{tel:+15550142}{\faPhone\ +1 555-0142}
+  \,|\, \href{mailto:taylor.reed@example.com}{\faEnvelope\ taylor.reed@example.com}
+  \,|\, \href{https://github.com/taylorreed-dev}{\faGithub\ github/taylorreed-dev}
+  \,|\, \href{https://www.linkedin.com/in/taylor-reed-dev/}{\faLinkedin\ linkedin/taylor-reed-dev}
+\end{center}
+
+\section{Summary}
+Backend engineer with 3+ years shipping production agentic AI systems and distributed services end-to-end --- RAG pipelines, voice AI, and LLM evaluation harnesses built on the same backbone as high-availability, multi-tenant platforms. Measurable scale record: 10--100$\times$ query speedups, sub-50ms cached reads, and 25\% AWS cost reduction at a 99.9\% uptime SLA.
+
+\section{Education}
+\resumeentry{Ashford Institute of Technology}{Ashford, MA}{B.Tech, Biotechnology}{2019 -- 2023}
+
+\section{Experience}
+\resumeentry{Meridian Health Technologies\ (MeridianCare)}{Austin, TX}{Backend Developer}{Apr 2025 -- Present}
+\begin{itemize}
+  \item Designed an agentic clinical documentation pipeline: session audio transcribed with Deepgram ASR, chunked and indexed in Pinecone (Gemini text-embedding-004); RAG over prior sessions autofills case sheets and generates clinical notes.
+  \item Led extraction of the notification and worker service from the FastAPI monolith; a 4-queue Redis Queue system with per-channel selective retry (FCM, Exotel SMS, SMTP) decouples lifecycle events and reminders from the request cycle.
+  \item Diagnosed and eliminated N+1 query bottlenecks via SQLAlchemy \texttt{selectinload}/\texttt{joinedload} eager-loading (\textbf{10--100$\times$} speedup); added Redis caching with event-driven invalidation and Alembic migrations.
+  \item Cut slot-query latency to \textbf{sub-50ms} across 200+ concurrent API endpoints with a MongoDB-backed doctor-availability cache using compound indexes, care-type flags, and explicit invalidation on slot mutations.
+  \item Architected payment orchestration integrating Razorpay checkout with AES-encrypted order secrets, idempotent webhook verification, clinic-scoped revenue attribution, and automated refund pipelines spanning four payment flows.
+  \item Rightsized ECS-on-EC2 fleets (Auto Scaling, Aurora read replicas), cutting AWS spend \textbf{25\%} while sustaining a \textbf{99.9\%} uptime SLA; rolled out blue-green deployments to eliminate release downtime.
+\end{itemize}
+
+\resumeentry{Independent Software Engineer \& AI Consultant}{Remote}{Contract --- Multiple Clients}{Jun 2023 -- Mar 2025}
+\begin{itemize}
+  \item Shipped \textbf{8+} production full-stack applications (React, Node.js, PostgreSQL) for SMB clients as sole engineer; owned architecture, CI/CD, and deploy lifecycle across every engagement.
+  \item Contracted with Scale AI (Outlier) reviewing 200+ LLM-generated code solutions/week across Python, TypeScript, and Go; authored RLHF QA rubrics that drove a \textbf{12\%} lift on internal coding benchmarks.
+  \item Engineered adversarial Docker-based terminal benchmarks (AfterQuery) exposing multi-step reasoning gaps in SOTA models (Claude, GPT-4); built reproducible harnesses targeting tasks beyond current LLM capability.
+\end{itemize}
+
+\section{Projects}
+\projectentry{AGRISETU --- AI Voice-First Agricultural Marketplace}{\href{https://github.com/taylorreed-dev/agrisetu}{\faGithub\ GitHub}}{TypeScript, Express.js, Next.js, Flutter, PostgreSQL, Prisma, AWS Bedrock, Transcribe, Polly, WebSocket, Turborepo}{Feb -- Apr 2026}
+\begin{itemize}
+  \item Built a voice-first marketplace for collective group ordering; real-time pipeline streams PCM audio over WebSocket to AWS Transcribe (11 Indian languages), processes through GLM-4.7 Flash on Bedrock, and returns speech via Polly TTS.
+  \item Grounded crop-market responses via RAG (Titan Embeddings v2 + Bedrock Knowledge Base), cutting hallucination.
+\end{itemize}
+
+\projectentry{TURBOCRAWL --- LLM-Ready MCP Web Crawler}{\href{https://github.com/taylorreed-dev/turbocrawl}{\faGithub\ GitHub}}{Java 21, Spring Boot 3.5, C++20, gRPC, Protobuf, Elasticsearch, PostgreSQL, Redis, Docker}{May 2026}
+\begin{itemize}
+  \item Engineered dual-service MCP server (Spring Boot 3.5 + C++20 gRPC worker) exposing 4 Model Context Protocol tools over Streamable HTTP and STDIO; Protobuf3 contract drives cross-language RPCs over Redis and PostgreSQL.
+  \item Implemented a 3-tier URL security model (host validation, domain allowlist, RFC1918/loopback SSRF blocking) with per-domain rate limiting and robots.txt enforcement; Elasticsearch field-boosted search over LLM-ready Markdown.
+\end{itemize}
+
+\projectentry{GOFETCH --- Concurrent Download Manager}{\href{https://github.com/taylorreed-dev/gofetch}{\faGithub\ GitHub}}{Go 1.25, BubbleTea, lipgloss, net/http, goroutines}{Apr 2026}
+\begin{itemize}
+  \item Engineered a concurrent segmented HTTP download engine in Go: byte-range splitting across a goroutine worker pool, SHA256-keyed resumable task state, ETag/Last-Modified validation, and atomic renames preventing write corruption.
+  \item Built a BubbleTea terminal UI with per-segment progress bars and speed meters updated on a 250ms tick; progress callbacks decouple the download engine from the UI layer via a Model-View-Update architecture.
+\end{itemize}
+
+\section{Skills}
+\begin{itemize}[leftmargin=0pt,label={}]
+  \item \textbf{Languages:} JavaScript/TypeScript, Python, C/C++, Java, Go, Dart, Bash, SQL
+  \item \textbf{Backend:} FastAPI, Express.js, Node.js, Spring Boot, gRPC, GraphQL, REST, WebSocket, Celery/RQ, JWT/OAuth 2.0
+  \item \textbf{AI/ML:} LLMs, RAG, RLHF, MCP, Vector Search, AWS Bedrock, Pinecone, LangChain, Prompt Engineering, Claude API
+  \item \textbf{Data \& Messaging:} PostgreSQL, MongoDB, Redis, Kafka, RabbitMQ, Elasticsearch, SQLAlchemy, Prisma, Alembic
+  \item \textbf{Infrastructure \& DevOps:} Docker, Kubernetes, AWS, Terraform, GitHub Actions, Prometheus, Grafana
+  \item \textbf{Architecture:} Microservices, Event-Driven Architecture, Distributed Systems, System Design, Caching Strategies
+  \item \textbf{Certifications:} Applied Algorithms \& Data Structures (AlgoZenith), Full Stack Open (Univ.\ of Helsinki)
+\end{itemize}
+
+\section{Achievements}
+\begin{itemize}
+  \item Scored 99.10 percentile (8,74,469 candidates) in JEE Main 2019; ranked 28th in the OBC category in WBJEE 2019.
+  \item Awarded by the Ministry of Parliamentary Affairs, Govt.\ of India for 4th place in National Youth Parliament 2016--17.
+\end{itemize}
+
+\end{document}
