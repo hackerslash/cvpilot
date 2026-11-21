@@ -1,17 +1,30 @@
+<div align="center">
+
 # CVPilot
 
-CVPilot is a Claude Code skill that tailors your resume to a specific job posting — automatically, truthfully, and without ever touching your main branch.
+A Claude Code skill that tailors your resume to a job posting, using only facts you've already recorded.
 
-It keeps your full career history in one structured file (`db.json`) and a LaTeX style shell (`base_template.tex`), then for each job you give it a URL to:
+![Claude Code](https://img.shields.io/badge/Claude_Code-skill-D97757?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3-3776AB?style=flat-square&logo=python&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-tectonic-008080?style=flat-square&logo=latex&logoColor=white)
 
-- research the role and company,
-- select only the truthful, relevant material from `db.json` (no invented claims, metrics, or skills),
-- render a one-page, ATS-optimized PDF with the repo-local `tectonic` binary,
-- and drop the result in `output/` — all inside an isolated git worktree, so your tracked files never change.
+</div>
 
-## Steps to use
+CVPilot keeps your full career history in one structured file (`db.json`) and a LaTeX layout shell (`base_template.tex`). Give it a job URL and it researches the role, picks the relevant material, and renders a one-page PDF. All edits happen in a temporary git worktree, so your tracked files never change.
 
-1. Open this repo in Claude Code (or Codex — an equivalent skill copy lives under `.agents/`).
+## Features
+
+- Strict-truth tailoring: selects, reorders and lightly rewrites `db.json` entries, never invents claims, metrics or skills
+- Short research pass on the job posting and company before selecting content
+- One-page, ATS-friendly PDF rendered with the bundled `tectonic` binary
+- Isolated git worktree per job; output lands in `output/` (gitignored)
+- Page-count check that warns when a resume runs over one page
+- Browser editor for `db.json` with validation
+- Works in Claude Code (`.claude/skills/`) and Codex (`.agents/skills/`)
+
+## Usage
+
+1. Open the repo in Claude Code (or Codex).
 2. Seed your career history once:
 
    ```
@@ -20,34 +33,28 @@ It keeps your full career history in one structured file (`db.json`) and a LaTeX
 
    This rebuilds `db.json` and `base_template.tex` from your source material and stops for your review.
 
-3. Tailor for any job by pasting the posting URL in plain language:
+3. Tailor for a job by pasting the posting URL:
 
    ```
    Tailor my resume for this job: https://company.com/job/backend-engineer
    ```
 
-4. Find the generated PDF in `output/` (not tracked by git). The skill also reports a cover letter draft when the posting calls for one.
+4. Pick up the PDF from `output/`. If the posting asks for a cover letter, the skill also drafts one.
 
-That's the whole workflow — everything below is reference detail for editing the underlying data directly.
+Requirements: `git` and Python 3. The committed `tectonic` binary is a macOS arm64 build; on other platforms, replace it with the matching [Tectonic](https://tectonic-typesetting.github.io/) release.
 
-## Candidate Database
+## Scripts
 
-`db.json` is the canonical inventory of candidate facts: contact details, summaries, education, experience, projects, skills, awards, tags, keywords, priorities, and repeatable bullets. Add as many bullets or entries as needed; tailoring selects relevant enabled material from this file and lightly rewrites it only when the facts stay unchanged.
+The skill drives these itself; you can also run them directly.
 
-To edit it in a browser:
+| Command | Purpose |
+| --- | --- |
+| `scripts/config-db` | Serve a local browser editor for `db.json` (prints the URL) |
+| `scripts/refresh-base --stage prepare --source <file>` | Start rebuilding the base resume from source files |
+| `scripts/tailor-job --stage prepare --job-url <url>` | Create the temporary worktree for a job |
+| `scripts/tailor-job --stage finalize --state-file <file> --json` | Render the PDF and report `page_count` / `over_page_limit` |
+| `scripts/check-page-count --pdf <file> --max-pages 1 --json` | Dependency-free page counter |
 
-```bash
-scripts/config-db
-```
+## Candidate database
 
-Open the printed localhost URL, edit structured sections, validate, and save.
-
-## Page Count
-
-Use the dependency-free page checker to keep generated resumes tight:
-
-```bash
-scripts/check-page-count --pdf output/Resume_2026-05-21.pdf --max-pages 1 --json
-```
-
-`scripts/tailor-job --stage finalize --json` also reports `page_count`, `page_limit`, and `over_page_limit`. This is warn-only, so the PDF still gets written while the AI can iterate if the result is over one page.
+`db.json` is the inventory of candidate facts: contact details, summaries, education, experience, projects, skills, awards, tags, keywords, priorities and reusable bullets. Add as many entries as you like; tailoring only uses enabled material that fits the job. The schema is documented in `.claude/skills/cvpilot/references/db-schema.md`.
